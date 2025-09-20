@@ -1,0 +1,48 @@
+{
+    "name": "forsign/api-php",
+    "description": "PHP SDK for ForSign digital signature platform",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1 || ^8.4",
+        "guzzlehttp/guzzle": "^7.5",
+        "psr/log": "^3.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7",
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "vimeo/psalm": "^5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "ForSign\\Api\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ForSign\\Api\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse",
+        "psalm": "psalm",
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "analyse": [
+            "@phpstan",
+            "@psalm",
+            "@cs-check"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.3.99"
+        }
+    },
+    "minimum-stability": "stable"
+}

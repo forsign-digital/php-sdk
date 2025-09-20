@@ -1,0 +1,92 @@
+POST http://localhost:8081/api/v1/operation
+Content-Type: application/json
+
+{
+    "Name": "New Contract via PHP SDK Builder",
+    "Language": "pt-br",
+    "DisplayCover": true,
+    "Files": [
+        {
+            "Id": "c4b4298a-9b86-46d0-add9-a47fcb9b4cc6",
+            "Description": "c4b4298a-9b86-46d0-add9-a47fcb9b4cc6.pdf"
+        }
+    ],
+    "Members": [
+        {
+            "Role": "Contratante",
+            "Name": "John Doe",
+            "Email": "john.doe@example.com",
+            "Observer": false,
+            "OrderPosition": 1,
+            "NotificationChannel": 0,
+            "SignatureType": 4,
+            "Attachments": [
+                {
+                    "Id": 0,
+                    "Name": "ID Document",
+                    "Description": "Please upload your ID",
+                    "Required": true,
+                    "FileType": [
+                        "pdf",
+                        "jpg"
+                    ],
+                    "FilesAllowed": 1,
+                    "InputAttachment": [
+                        4
+                    ]
+                }
+            ],
+            "FormFields": [
+                {
+                    "Name": "CPF",
+                    "Description": "Please enter your CPF",
+                    "Required": true,
+                    "Type": "Others",
+                    "FieldType": "Text",
+                    "Max": 500,
+                    "Value": null,
+                    "DocumentId": "c4b4298a-9b86-46d0-add9-a47fcb9b4cc6",
+                    "Positions": [
+                        {
+                            "Page": 1,
+                            "CoordenateX": "30%",
+                            "CoordenateY": "50%"
+                        }
+                    ]
+                }
+            ],
+            "Signatures": [
+                {
+                    "DocumentId": "c4b4298a-9b86-46d0-add9-a47fcb9b4cc6",
+                    "PrintSignature": true,
+                    "Positions": [
+                        {
+                            "Page": 1,
+                            "CoordenateX": "70%",
+                            "CoordenateY": "80%"
+                        }
+                    ]
+                }
+            ],
+            "Rubrics": [],
+            "HasSignatureTag": false,
+            "SignPositionTag": null,
+            "FormTitle": "Informações Adicionais",
+            "FormDescription": "Por favor, preencha os campos abaixo.",
+            "AuthenticationChannel": 0,
+            "Phone": "+1234567890"
+        }
+    ],
+    "Groups": [],
+    "Order": true,
+    "MemberMovementWarning": false,
+    "OnPremises": false,
+    "Metadata": [
+        {
+            "Key": "@module/redirect-url",
+            "Value": "https://your-website.com/thank-you/{operationId}"
+        }
+    ],
+    "ExpirationDate": "2025-10-04T19:45:21+00:00",
+    "ExternalId": "php-sdk-test-123"
+}
